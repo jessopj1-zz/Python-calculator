@@ -1,3 +1,4 @@
+import os
 print("This is John's awsome (basic) calculator here are a few ground rules:")
 print("1. Only use two numbers")
 print("2. No fractions")
@@ -26,3 +27,4 @@ else:
           print(numb,"+",numb2,"=", int(numb)+int(numb2))
     elif operator == "2":
           print(numb,"-",numb2,"=", int(numb)-int(numb2))
+os.system("pause")
