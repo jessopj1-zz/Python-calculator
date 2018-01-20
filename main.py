@@ -2,13 +2,14 @@ print("This is John's awsome (basic) calculator here are a few ground rules:")
 print("1. Only use two numbers")
 print("2. No fractions")
 
-numb = input("What is your first number?")
+numb = input("What is your first number?") #ask for the users input
 print("1 = Add")
 print("2 = Subtract")
 print("3 = Divide")
 print("4 = Times")
 print("5 = Square")
 print("6 = Cube")
+
 operator = input("What operator would you like to use?")
 if operator == "5":
       print(numb," squared  is", int(numb)*int(numb))
