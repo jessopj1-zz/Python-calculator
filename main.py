@@ -26,4 +26,3 @@ else:
           print(numb,"+",numb2,"=", int(numb)+int(numb2))
     elif operator == "2":
           print(numb,"-",numb2,"=", int(numb)-int(numb2))
-os.system("pause")
