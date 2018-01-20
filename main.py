@@ -1,23 +1,17 @@
 import os
+mylist=[]
 print("This is John's awsome (basic) calculator here are a few ground rules:")
 print("1. Only use two numbers")
 print("2. No fractions")
+print("I can do lots of different types of things including working out the length of a hypotenuse of a right angled triangle, I can also calculate different types of averages, or I can do normal calculator things like addition, subtraction, division, multiplication, square and cube rooting and a few other things")
+print("Normal = 1")
+print("Averages = 2")
+print("Pythagoras' theorum = 3")
+mode=input("Which mode would you like to use: ")
 
-numb = input("What is your first number?") #ask for the users input
-print("1 = Add")
-print("2 = Subtract")
-print("3 = Divide")
-print("4 = Times")
-print("6 = Cube")
-pythag=input("Would you like me to work out the length of the hypotenuse of a right angles triangle? [y/n]")
-
-if operator == "5":
-      print(numb," squared  is", int(numb)*int(numb))
-elif operator == "6":
-        print (numb, " cubed is",  int(numb)*int(numb)*int(numb))
-
+if mode == "1":
     #ask user for their fist number
-    numb = input("What is your first number?")
+    numb = input("What is your first number? ")
     print("1 = Add")
     print("2 = Subtract")
     print("3 = Divide")
@@ -28,7 +22,7 @@ elif operator == "6":
     print("8 = Cube root")
 
     #ask user whoch operator they would like to use
-    operator = input("What operator would you like to use?")
+    operator = input("What operator would you like to use? ")
     #is square or cuben work out answer and end
     if operator == "5":
         print(numb," squared  is", int(numb)**2)
@@ -41,7 +35,7 @@ elif operator == "6":
 
     else:
         #if anything else ask for second number and work out answer
-        numb2 = input("What is your second number?")
+        numb2 = input("What is your second number? ")
         if operator == "4":
             print(numb,"*",numb2,"=", int(numb)*int(numb2))
         elif operator == "3":
@@ -52,4 +46,24 @@ elif operator == "6":
             print(numb,"-",numb2,"=", int(numb)-int(numb2))
         else:
             print("You did something wrong try again and make sure you read my rules.")
+elif mode == "2":
+    print("At the moment I can only work out the mean I will try and add more at a later date")
+    num = int(input("Please input your first number: "))
+    mylist.append(num)
+    done = "n"
+    while (done == "n"):
+        num2 = int(input("What is your next number? "))
+        done = input("are you done yet? [y/n]")
+        mylist.append(num2)
+
+    print("The mean of your numbers is ", sum(mylist)/len(mylist))
+elif mode == "3":
+    side=input("how long is one of the sides (that you know) ")
+    side2 = input("Ho2 long is the other side? ")
+    print("The sum to work out the hypotenuse is as follows A squared + B squared = C squared")
+    hypotenuse=int(side)*int(side)+int(side2)*int(side2)
+    print("The length of the hypotenuse is ", hypotenuse**(1/2))
+
+else:
+    print("You did something wrong please start again")
 os.system("pause")
