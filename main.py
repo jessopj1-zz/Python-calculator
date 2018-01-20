@@ -10,7 +10,7 @@ print("4 = Times")
 print("5 = Square")
 print("6 = Cube")
 
-operator = input("What operator would you like to use?")
+operator = input("What operator would you like to use?") #life=42
 if operator == "5":
       print(numb," squared  is", int(numb)*int(numb))
 elif operator == "6":
