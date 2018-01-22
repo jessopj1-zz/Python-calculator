@@ -1,7 +1,7 @@
 import os
 mylist=[]
 mylist2=[]
-print("This is John's awsome (basic) calculator here are a few ground rules:")
+print("This is John's awesome (basic) calculator here are a few ground rules:")
 print("1. Only use two numbers")
 print("2. No fractions")
 print("I can do lots of different types of things including working out the length of a hypotenuse of a right angled triangle, I can also calculate different types of averages, or I can do normal calculator things like addition, subtraction, division, multiplication, square and cube rooting and a few other things")
