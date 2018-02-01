@@ -19,12 +19,15 @@ if mode == "1":
             done = input("Are you done yet? [y/n]")
             additionList.append(num2)
         print("Sum of ", additionList2, " = ", sum(additionList2))
+
     elif operator == "2":
 
         print(numb,"-",numb2,"=", int(numb)-int(numb2))
+
     elif operator == "3":
 
         print(numb,"/",numb2,"=", int(numb)/int(numb2))
+
     elif operator == "4":
 
         print(numb,"*",numb2,"=", int(numb)*int(numb2))
@@ -43,6 +46,7 @@ elif mode == "2":
         additionList.append(num2)
 
     print("The mean of your numbers is ", sum(additionList)/len(additionList))
+    
 elif mode == "3":
     type = input("Do you want to find out the length of the hypotenuse or one of the other side? [other/hyp]")
 
