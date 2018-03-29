@@ -1,6 +1,8 @@
 import os
+def power(x, y):
+    return x**y
+
 additionList=[]
-additionList2=[]
 print("This is John's awsome (basic) calculator here are a few ground rules:")
 print("Only use two numbers")
 print("No fractions")
@@ -12,13 +14,19 @@ print("Pythagoras' theorum = 3")
 mode=input("Which mode would you like to use: ")
 
 if mode == "1":
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Division")
+    print("4. Multiplication")
+    print("5. Square, Square Root, Cube, Cube root")
+    operator = input("Which operator would you like to use? ")
     if operator == "1":
 
         while (done == "n"):
             numb2 = int(input("What is your next number? "))
             done = input("Are you done yet? [y/n]")
             additionList.append(num2)
-        print("Sum of ", additionList2, " = ", sum(additionList2))
+        print("Sum of ", additionList, " = ", sum(additionList))
 
     elif operator == "2":
 
@@ -29,8 +37,24 @@ if mode == "1":
         print(numb,"/",numb2,"=", int(numb)/int(numb2))
 
     elif operator == "4":
+        numb = input("What is your fist number? ")
+        ans = numb
+        numb2 = int(input("What is your next number? "))
 
-        print(numb,"*",numb2,"=", int(numb)*int(numb2))
+        while (done == "n"):
+            numb2 = int(input("What is your next number? "))
+            done = input("Are you done yet? [y/n]")
+            additionList.append(numb2)
+            ans = ans*numb2
+
+        print(additionList, "all multiplied = ", ans)
+
+    elif operator == "5":
+        x = input("What number would you like to use? ")
+        print("To what power would you like to work it out")
+        y = input("0.5 is the square root, 0.33333 is the cube root")
+        ans=power(x, y)
+        print("your answer is", ans)
 
     else:
         print("You did something wrong try again and make sure you read my rules.")
@@ -46,7 +70,7 @@ elif mode == "2":
         additionList.append(num2)
 
     print("The mean of your numbers is ", sum(additionList)/len(additionList))
-    
+
 elif mode == "3":
     type = input("Do you want to find out the length of the hypotenuse or one of the other side? [other/hyp]")
 
@@ -55,14 +79,14 @@ elif mode == "3":
         side2 = input("How long is the other side? ")
         print("The sum to work out the hypotenuse is as follows A squared + B squared = C squared")
         unknown=int(side)**2+int(side2)**2
-        print("The length of the hypotenuse is ", unknown**(1/2))
+        print("The length of the hypotenuse is ", power(unknown, 0.5)
 
     elif type == "other":
         side = input("How long is one of the sides (the longer of the two) ")
         side2 = input("How long is the other side? ")
         print("The sum to work out the hypotenuse is as follows C squared + A squared = B squared")
         unknown=int(side)**2-int(side2)**2
-        print("The length of the hypotenuse is ", unknown**(1/2))
+        print("The length of the hypotenuse is ", power(unknown, 0.5))
 
     else:
         print("Incorrect command please start again")
